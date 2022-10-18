@@ -23,7 +23,7 @@ describe("App Insights Resource", () => {
         region,
         stage,
         resourceGroup: resourceGroupName,
-        runtime: Runtime.NODE10
+        runtime: Runtime.NODE12
       },
       service: ""
     } as any;
@@ -43,7 +43,7 @@ describe("App Insights Resource", () => {
         region,
         stage,
         resourceGroup: resourceGroupName,
-        runtime: Runtime.NODE10,
+        runtime: Runtime.NODE12,
         appInsights: {
           name: appInsightsName,
         },
