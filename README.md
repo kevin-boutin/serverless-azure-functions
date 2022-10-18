@@ -8,6 +8,67 @@ This plugin enables Azure Functions support within the Serverless Framework.
 
 <!-- [![Node Integration Tests](https://github.com/serverless/serverless-azure-functions/workflows/Node%20Integration%20Tests/badge.svg)](https://github.com/serverless/serverless-azure-functions/actions?query=workflow%3A%22Node+Integration+Tests%22) [![Python Integration Tests](https://github.com/serverless/serverless-azure-functions/workflows/Python%20Integration%20Tests/badge.svg)](https://github.com/serverless/serverless-azure-functions/actions?query=workflow%3A%22Python+Integration+Tests%22) [![.NET Integration Tests](https://github.com/serverless/serverless-azure-functions/workflows/.NET%20Integration%20Tests/badge.svg)](https://github.com/serverless/serverless-azure-functions/actions?query=workflow%3A%22.NET+Integration+Tests%22) -->
 
+## Branches (Locus)
+
+Branches
+
+- master: master branch from https://github.com/serverless/serverless-azure-functions
+- dev-2.0.x: Locus Robotics development work for 2.0 version
+
+To set up your local to work with serverless-azure-function github repository you need to add that remote
+
+`git remote add serverless-origin https://github.com/serverless/serverless-azure-functions.git`
+
+You should be able to see the new origin:
+
+```
+➜  serverless-azure-functions git:(dev-2.0.x) git remote
+origin
+serverless-origin
+```
+
+You can then update the master branch with the serverless repo
+
+`git pull serverless-origin master`
+
+or download all branches
+
+`git fetch serverless-origin --all`
+
+git remote add serverless-origin https://github.com/serverless/serverless-azure-functions.git
+
+If you need to find more info about the serverless repo
+
+`git remote show serverless-origin`
+
+## Tagging (Locus)
+
+When developing a feature/bug, create a feature branch from the correct dev branch (dev-2.0.x).
+When feature is merged, create a tag.
+
+To not conflict with serverless-azure-functions we are increasing the version by adding a letter to it.
+
+For example, if a feature is created from 2.0.2, create a tag for 2.0.2-a. After that, all Locus Robotics feature/bugs will increase the letter, ie 2.0.2-b.
+
+## Publishing (Locus)
+
+To publish to artifactory:
+
+- Bump version in package.json
+- npm run build
+- npm publish --registry https://locusbots.jfrog.io/artifactory/api/npm/npm-virtual/
+- Create tag for version: `git tag 2.1.0-g && git push origin 2.1.0-g`
+
+## Dynamic host.json for Unique Durable Task Hub (Locus)
+
+- bindings for durable functions added
+- activityTrigger
+- orchestrationTrigger
+- entityTrigger
+- orchestrationClient
+- durableClient
+- dynamichost.json substitutes RESOURCE_KEY for RESOURCE_KEY env variable to make host.json
+
 ## Quickstart
 
 ### Pre-requisites
