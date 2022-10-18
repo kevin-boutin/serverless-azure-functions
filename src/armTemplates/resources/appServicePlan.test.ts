@@ -17,7 +17,7 @@ describe("App Service Plan Resource", () => {
       region,
       stage,
       resourceGroup: resourceGroupName,
-      runtime: Runtime.NODE10,
+      runtime: Runtime.NODE12,
     },
     service: ""
   } as any;
@@ -61,7 +61,7 @@ describe("App Service Plan Resource", () => {
         region,
         stage,
         resourceGroup: resourceGroupName,
-        runtime: Runtime.NODE10,
+        runtime: Runtime.NODE12,
       },
       plugins: [],
       functions: {},
@@ -90,7 +90,7 @@ describe("App Service Plan Resource", () => {
         region,
         stage,
         resourceGroup: resourceGroupName,
-        runtime: Runtime.NODE10,
+        runtime: Runtime.NODE12,
         os: FunctionAppOS.LINUX,
       },
       plugins: [],
@@ -120,7 +120,7 @@ describe("App Service Plan Resource", () => {
         region,
         stage,
         resourceGroup: resourceGroupName,
-        runtime: Runtime.NODE10,
+        runtime: Runtime.NODE12,
         appServicePlan: {
           name: "customAppServicePlanName",
           hostingEnvironment: "customHostingEnvironment",
