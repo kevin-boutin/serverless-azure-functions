@@ -36,28 +36,28 @@ export const defaultParameters: ConfigurationParameters = {
     runtime: "dotnet",
     region: "weur",
   },
-  "node10-linux": {
-    serviceName: "nd10-lin",
-    configName: "node10-linux",
-    runtime: "node v10.",
+  "node14-linux": {
+    serviceName: "nd14-lin",
+    configName: "node14-linux",
+    runtime: "node v14.",
     region: "weur",
   },
-  "node10-linux-external": {
-    serviceName: "nd10-lin-ext",
-    configName: "node10-linux-external",
-    runtime: "node v10.",
+  "node14-linux-external": {
+    serviceName: "nd14-lin-ext",
+    configName: "node14-linux-external",
+    runtime: "node v14.",
     region: "weur",
   },
-  "node10-windows": {
-    serviceName: "nd10-win",
-    configName: "node10-windows",
-    runtime: "node v10.",
+  "node14-windows": {
+    serviceName: "nd14-win",
+    configName: "node14-windows",
+    runtime: "node v14.",
     region: "weur",
   },
-  "node10-windows-webpack": {
-    serviceName: "nd10-win-web",
-    configName: "node10-windows-webpack",
-    runtime: "node v10.",
+  "node14-windows-webpack": {
+    serviceName: "nd14-win-web",
+    configName: "node14-windows-webpack",
+    runtime: "node v14.",
     region: "weur",
   },
   "node12-linux": {
